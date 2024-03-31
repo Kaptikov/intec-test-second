@@ -1,0 +1,147 @@
+.footer {
+	background: $black-bg;
+
+
+	// .footer__container
+	&__container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 50px;
+		margin-top: clamp(70px, 3.443rem + 4.66vw, 111px);
+		margin-bottom: clamp(90px, 3.852rem + 8.86vw, 168px);
+		color: $white-second;
+	}
+
+	// .footer__text
+	&__text {
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		max-width: 351px;
+		width: 100%;
+		flex: 1 1 auto;
+	}
+
+	// .footer__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		// flex-wrap: wrap;
+		gap: 30px;
+		flex: 0 0 56.15%;
+	}
+
+	// .footer__menu
+	&__menu {}
+
+	// .footer__contacts
+	&__contacts {
+		max-width: 323px;
+		width: 100%;
+	}
+
+	// .footer__label
+	&__label {
+		position: relative;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		text-transform: capitalize;
+		color: $white;
+		margin-bottom: 52px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -26px;
+			left: 0px;
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: $white;
+
+		}
+	}
+
+}
+
+.menu-footer {
+
+	// .menu-footer__label
+	&__label {}
+
+	// .menu-footer__lists
+	&__lists {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 321px;
+		width: 100%;
+		gap: 50px;
+	}
+
+	// .menu-footer__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .menu-footer__item
+	&__item {
+
+		&:not(:last-child) {
+			margin-bottom: 13px;
+		}
+	}
+
+	// .menu-footer__link
+	&__link {
+		line-height: 120%;
+	}
+}
+
+.contacts-footer {
+
+	// .contacts-footer__label
+	&__label {}
+
+	// .contacts-footer__items
+	&__items {}
+
+	// .contacts-footer__item
+	&__item {
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .contacts-footer__item-tel
+	&__item-tel {
+		margin-bottom: 56px !important;
+	}
+
+	// .contacts-footer__link
+	&__link {}
+
+	// .contacts-footer__item-email
+	&__item-email {}
+
+	// .contacts-footer__item-schedule
+	&__item-schedule {
+		// white-space: nowrap;
+	}
+}
+
+@media (max-width: 996px) {
+	.footer {
+		&__wrapper {
+			flex-direction: column;
+			flex: 0 0 auto;
+			gap: 50px;
+		}
+	}
+}
