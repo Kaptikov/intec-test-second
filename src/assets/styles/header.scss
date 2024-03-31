@@ -1,0 +1,247 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-33.9%);
+  width: min(75.625%, 1452px);
+  // width: clamp(77.5rem, 11.25rem + 66.25vw, 90.75rem);
+  background: $black;
+  color: $white;
+  z-index: 3;
+  // background: $white;
+  // border: 1px solid red;
+  // display: none;
+
+  // .header__container
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  // .header__menu
+  &__menu {
+    margin: 0 auto;
+  }
+
+  // .header__button
+  &__button {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 162%;
+    letter-spacing: 0.03em;
+    padding: 45px 79px 45px 76px;
+    padding-top: clamp(35px, -0.864rem + 4.9vw, 45px);
+    padding-bottom: clamp(35px, -0.864rem + 4.9vw, 45px);
+    padding-left: clamp(65px, 1.011rem + 4.9vw, 75px);
+    padding-right: clamp(69px, 1.261rem + 4.9vw, 79px);
+    background: $blue-main;
+    white-space: nowrap;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      // box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  // .header__burger-menu
+  &__burger-menu {
+    display: none;
+    opacity: 0;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    z-index: 4;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  // .header__burger
+  &__burger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    border: none;
+    background-color: inherit;
+    transition: margin 0.3s ease-in-out;
+    z-index: 100;
+
+    & span {
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      left: 5px;
+      border-radius: 5px;
+      transition: transform .3s ease-in-out,
+        opacity .3s ease-in-out;
+
+      &:nth-child(1) {
+        transform: translateY(-10px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(10px);
+      }
+    }
+  }
+
+  &__burger--active {
+    & span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    & span:nth-child(2) {
+      opacity: 0;
+    }
+
+    & span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+  }
+}
+
+
+.header-menu {
+
+  // .header-menu__list
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .header-menu__item
+  &__item {
+    &:not(:last-child) {
+      margin-right: clamp(20px, -2.819rem + 6.56vw, 54px);
+    }
+  }
+
+  // .header-menu__link
+  &__link {
+    font-weight: 500;
+    line-height: 162%;
+    letter-spacing: 0.03em;
+
+    &:hover {
+      // color: $blue-second;
+    }
+  }
+}
+
+.burger-menu {
+
+  // .burger-menu__menu
+  &__menu {}
+
+  // .burger-menu__list
+  &__list {}
+
+  // .burger-menu__item
+  &__item {
+    font-size: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .burger-menu__link
+  &__link {}
+
+  // .burger-menu__button
+  &__button {
+    display: none;
+    margin-top: 30px;
+    padding: 10px 20px;
+    width: max-content;
+  }
+}
+
+
+
+
+@media (max-width: 1600px) {
+  .header {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 996px) {
+  .header {
+    position: fixed;
+
+
+
+    &__menu {
+      display: none;
+    }
+
+    &__button {
+      margin-left: auto;
+    }
+
+    // .header__burger-menu--visible
+    &__burger-menu--visible {
+      display: flex;
+      opacity: 1;
+    }
+
+    &__burger {
+      // margin-left: auto;
+      display: block
+    }
+  }
+
+  .header__container.sticky {
+    .header__button {
+      padding: 25px 59px 25px 55px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: none;
+
+    &__button {
+      display: none;
+      // margin-left: auto;
+    }
+
+    &__burger {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+  }
+
+  .header__container.sticky {
+    .header__burger {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .burger-menu {
+    &__button {
+      display: block;
+    }
+  }
+}

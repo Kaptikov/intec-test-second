@@ -1,19 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite App</title>
 </head>
 
 <body>
-  <div>
-    <h1>Hello world!</h1>
-    <img src="src/assets/image.jpg" alt="">
-  </div>
-  <script type="module" src="/main.js"></script>
+	<div class="wrapper">
+		<include src="./src/views/header.html"></include>
+		<main class="page">
+			<include src="./src/views/main.html"></include>
+
+		</main>
+	</div>
+	<script type="module" src="/main.js"></script>
+	<script type="module" src="./src/js/swiper.js"></script>
+	<script type="module" src="./src/js/burger.js"></script>
+	<script type="module" src="./src/js/headerFixed.js"></script>
 </body>
 
 </html>
