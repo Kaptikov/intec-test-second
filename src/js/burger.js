@@ -12,11 +12,3 @@ burger?.addEventListener('click', () => {
   burger?.classList.toggle('header__burger--active')
   menu?.classList.toggle('header__burger-menu--visible')
 })
-
-menuItems.forEach(el => {
-  el.addEventListener('click', () => {
-    body.classList.remove('stop-scroll')
-    burger?.classList.remove('header__burger--active')
-    menu?.classList.remove('header__burger-menu--visible')
-  })
-})
