@@ -1,0 +1,101 @@
+.statistic {
+	background: url('../img/bg-stat.jpg') no-repeat center center/cover;
+
+	// .statistic__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 110px;
+		padding-bottom: 142px;
+		color: $white;
+	}
+
+	// .statistic__title
+	&__title {
+		position: relative;
+		font-weight: 700;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 102px;
+
+
+	}
+
+	// .statistic__cards
+	&__cards {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 30px;
+		margin-bottom: 103px;
+	}
+
+	// .statistic__card
+	&__card {
+		max-width: 306px;
+		width: 100%;
+	}
+
+	// .statistic__card-count
+	&__card-count {
+		position: relative;
+		font-weight: 700;
+		font-size: clamp(34px, 1.443rem + 3.41vw, 64px);
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		margin-bottom: 34px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -11px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: $white;
+		}
+	}
+
+
+	// .statistic__card-text
+	&__card-text {
+		line-height: 150%;
+		letter-spacing: 0.03em;
+	}
+
+	// .statistic__btns
+	&__btns {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 25px;
+	}
+
+	// .statistic__btn
+	&__btn {}
+
+	// .statistic__btn-join
+	&__btn-join {
+		max-width: 300px;
+		padding: 16px 35px;
+		transition: background 0.2s ease-in-out;
+
+		&:hover {
+			background: $blue-text;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.statistic {
+		&__cards {
+			justify-content: center;
+		}
+	}
+
+}

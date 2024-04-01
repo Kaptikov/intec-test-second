@@ -34,6 +34,7 @@ a:hover {
 	font-size: clamp(32px, 1.773rem + 1.14vw, 42px);
 	font-weight: 600;
 	line-height: 129%;
+	letter-spacing: 0.03em;
 }
 
 .button {
@@ -55,7 +56,7 @@ a:hover {
 
 .button--reg {
 	border-radius: 36px;
-	max-width: 300px;
+	max-width: 251px;
 	width: 100%;
 	padding: 16px 44px;
 	background: $blue-main;
@@ -72,9 +73,9 @@ a:hover {
 
 .button--calc {
 	border-radius: 36px;
-	max-width: 305px;
+	max-width: 300px;
 	width: 100%;
-	padding: 16px 39px;
+	padding: 16px 37px;
 	background: transparent;
 	border: 2px solid $white;
 	font-weight: 500;
