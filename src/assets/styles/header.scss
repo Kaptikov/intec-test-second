@@ -219,7 +219,9 @@
 
 @media (max-width: 768px) {
   .header {
-    background: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
 
     &__button {
       display: none;

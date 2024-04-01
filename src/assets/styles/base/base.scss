@@ -53,6 +53,41 @@ a:hover {
 	}
 }
 
+.button--reg {
+	border-radius: 36px;
+	max-width: 300px;
+	width: 100%;
+	padding: 16px 44px;
+	background: $blue-main;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 162%;
+	letter-spacing: 0.03em;
+	transition: background 0.2s ease-in-out;
+
+	&:hover {
+		background: $blue-second;
+	}
+}
+
+.button--calc {
+	border-radius: 36px;
+	max-width: 305px;
+	width: 100%;
+	padding: 16px 39px;
+	background: transparent;
+	border: 2px solid $white;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 162%;
+	letter-spacing: 0.03em;
+	transition: background 0.2s ease-in-out;
+
+	&:hover {
+		background: $blue-second;
+	}
+}
+
 .stop-scroll {
 	overflow: hidden;
 }
