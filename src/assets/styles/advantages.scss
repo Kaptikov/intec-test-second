@@ -8,28 +8,28 @@
 		padding-bottom: 114px;
 	}
 
-	// .advantages__subtitle
-	&__subtitle {
-		position: relative;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 150%;
-		text-align: center;
-		color: $blue-text;
-		margin-bottom: 50px;
+	// .advantages__zsubtitle
+	// &__subtitle {
+	// 	position: relative;
+	// 	font-weight: 700;
+	// 	font-size: 18px;
+	// 	line-height: 150%;
+	// 	text-align: center;
+	// 	color: $blue-text;
+	// 	margin-bottom: 50px;
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: -29px;
-			left: 50%;
-			transform: translateX(-50%);
-			display: block;
-			width: 65px;
-			height: 3px;
-			background-color: $blue-text;
-		}
-	}
+	// 	&::after {
+	// 		content: '';
+	// 		position: absolute;
+	// 		bottom: -29px;
+	// 		left: 50%;
+	// 		transform: translateX(-50%);
+	// 		display: block;
+	// 		width: 65px;
+	// 		height: 3px;
+	// 		background-color: $blue-text;
+	// 	}
+	// }
 
 	// .advantages__title
 	&__title {

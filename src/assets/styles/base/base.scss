@@ -89,6 +89,28 @@ a:hover {
 	}
 }
 
+.subtitle {
+	position: relative;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 150%;
+	text-align: center;
+	color: $blue-text;
+	margin-bottom: 50px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -29px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: block;
+		width: 65px;
+		height: 3px;
+		background-color: $blue-text;
+	}
+}
+
 .stop-scroll {
 	overflow: hidden;
 }
