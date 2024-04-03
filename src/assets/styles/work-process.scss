@@ -12,67 +12,71 @@
   &__top {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 100px;
   }
 
   // .work-process__images
   &__images {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    /* Два ряда */
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: row;
-    gap: 19px 23px;
-    margin-right: clamp(50px, -10.268rem + 17.86vw, 100px);
-
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 23px 19px;
+    // margin-right: clamp(50px, -10.268rem + 17.86vw, 100px);
+    margin-right: 50px;
   }
 
   // .work-process__img
-  &__img {
-    position: relative;
-    border-radius: 6px;
+  // &__img {
+  //   position: relative;
+  //   border-radius: 6px;
 
-    // .work-process__img_text
-    &_text {
-      display: flex;
-      align-items: end;
-      max-width: 302px;
-      width: 100%;
-      padding: 0 7px 45px 31px;
-      font-weight: 700;
-      font-size: 42px;
-      line-height: 129%;
-      letter-spacing: 0.03em;
-      color: $white;
-      background: $blue-main;
-    }
+  //   // .work-process__img_text
+  //   // &_text {
+  //   //   display: flex;
+  //   //   flex-direction: row;
+  //   //   align-items: flex-end;
+  //   //   // min-width: 304px;
+  //   //   // max-width: 302px;
+  //   //   width: 304px;
+  //   //   max-height: 327px;
+  //   //   // width: 100%;
+  //   //   // padding: 0 7px 45px 31px;
+  //   //   padding: 0 0 clamp(1.25rem, 0.357rem + 4.46vw, 2.5rem) clamp(0.313rem, -0.848rem + 5.8vw, 1.938rem);
+  //   //   font-weight: 700;
+  //   //   font-size: clamp(18px, 0.232rem + 4.46vw, 38px);
+  //   //   line-height: 129%;
+  //   //   letter-spacing: 0.03em;
+  //   //   color: $white;
+  //   //   background: $blue-main;
+  //   // }
 
-    & img {
-      // width: 100%;
-      // height: 100%;
-      object-fit: contain;
-    }
+  //   // & img {
+  //   //   // width: 100%;
+  //   //   // min-width: 304px;
+  //   //   // height: 100%;
+  //   //   object-fit: contain;
+  //   // }
 
-    // .work-process__img-1
-    &-1 {}
+  //   // .work-process__img-1
+  //   // &-1 {}
 
-    // .work-process__img-2
-    &-2 {
-
-      grid-column: span 2;
-    }
-  }
+  //   // // .work-process__img-2
+  //   // &-2 {
+  //   //   grid-column: span 2;
+  //   // }
+  // }
 
   // .work-process__content
   &__content {
     margin-top: auto;
     max-width: 673px;
     width: 100%;
+    margin-right: 78px;
   }
 
   // .work-process__title
   &__title {
-    margin-bottom: 38px;
+    margin-bottom: clamp(28px, -2rem + 5vw, 38px);
   }
 
   // .work-process__text
@@ -80,22 +84,22 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 160%;
-    margin-bottom: 66px;
+    margin-bottom: clamp(36px, -9rem + 15vw, 66px);
   }
 
-  // .work-process__button
-  &__button {
-    background: $blue-main;
-    border-radius: 36px;
-    width: 236px;
-    height: 60px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 162%;
-    letter-spacing: 0.03em;
-    padding: 16px 40px;
-    color: $white;
-  }
+  // // .work-process__button
+  // &__button {
+  //   background: $blue-main;
+  //   border-radius: 36px;
+  //   width: 236px;
+  //   height: 60px;
+  //   font-weight: 500;
+  //   font-size: 18px;
+  //   line-height: 162%;
+  //   letter-spacing: 0.03em;
+  //   padding: 16px 40px;
+  //   color: $white;
+  // }
 
   // .work-process__bottom
   &__bottom {
@@ -164,8 +168,7 @@
     }
 
     &__images {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr 0.6fr;
+      // grid-template-columns: repeat(2, 1fr);
       margin-right: 0;
       margin-bottom: 70px;
       // order: 2;
@@ -174,8 +177,11 @@
     &__img {
       &_text {
         max-width: 100%;
-        padding: 0 7px 45px 31px;
-        font-size: 36px;
+        width: 100%;
+        max-height: none;
+        min-width: 80px;
+        // padding: 0 7px 45px 31px;
+        // font-size: 36px;
       }
 
       & img {
@@ -185,7 +191,8 @@
     }
 
     &__content {
-      max-width: 807px;
+      max-width: 876px;
+      margin-right: 0;
       // margin-bottom: 70px;
     }
   }

@@ -131,17 +131,46 @@
 	&__item-email {}
 
 	// .contacts-footer__item-schedule
-	&__item-schedule {
-		// white-space: nowrap;
-	}
+	&__item-schedule {}
 }
 
 @media (max-width: 996px) {
 	.footer {
+		&__text {
+			max-width: none;
+		}
+
 		&__wrapper {
-			flex-direction: column;
 			flex: 0 0 auto;
 			gap: 50px;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.menu-footer {
+		&__lists {
+			gap: 20px;
+		}
+	}
+}
+
+@media (max-width: 556px) {
+	.footer {
+
+		&__wrapper {
+			flex-direction: column;
+		}
+	}
+
+	.menu-footer {
+		max-width: 323px;
+		width: 100%;
+
+		&__lists {
+
+			gap: 13px;
 		}
 	}
 }

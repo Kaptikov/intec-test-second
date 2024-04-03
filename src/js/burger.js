@@ -1,9 +1,5 @@
 const burger = document?.querySelector('[data-burger]')
-// const burgerBtn = document?.querySelector('[data-burger__btn]')
 const menu = document?.querySelector('[data-menu]')
-// const logo = document?.querySelector('[data-logo]')
-// const menuTxt = document?.querySelector('[data-menuTxt]')
-// const menuItems = menu?.querySelectorAll('a')
 const body = document.body
 
 burger?.addEventListener('click', () => {
